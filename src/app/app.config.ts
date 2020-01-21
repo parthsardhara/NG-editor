@@ -1,3 +1,5 @@
+// https://www.npmjs.com/package/@kolkov/angular-editor
+
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 export const editorConfig: AngularEditorConfig = {
