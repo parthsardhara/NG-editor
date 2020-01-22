@@ -18,4 +18,14 @@ export class AppComponent {
   submitText() {
     document.getElementById('displayText').innerHTML = this.angularEditorFG.controls.email.value;
   }
+
+  getHtmlCode() {
+    // toggleEditorMode-editor1
+    document.getElementById('toggleEditorMode-').click();
+    const test = document.getElementById('sourceText').innerHTML;
+    const data = test.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+    document.getElementById('data').innerHTML = data;
+    document.getElementById('toggleEditorMode-').click();
+  }
+
 }

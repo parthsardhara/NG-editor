@@ -3,20 +3,23 @@
     <h3>Form Angular editor</h3>
     <form [formGroup]="angularEditorFG" (submit)="submitText()">
       <angular-editor [(ngModel)]="editorText" formControlName="email" [config]="editorConfig"></angular-editor>
-      <button class="btn btn-primary mt-3" type="submit">Submit</button>
+      <button class="btn btn-primary mt-3 mb-3" type="submit">Submit</button>
     </form>
+
+    <button class="btn btn-primary" (click)="getHtmlCode()">HTML Code</button>
     <div id="displayText">
     </div>
+    <div id="data"></div>
   </div>
 
   <div class="m-2 card card-body">
     <h3>Html Content1</h3>
     <angular-editor id="editor1" [(ngModel)]="htmlContent1" [config]="editorConfig"></angular-editor>
-    {{htmlContent1}}
+    {{ htmlContent1 }}
   </div>
   <div class="m-2 card card-body">
     <h3>Html Content2</h3>
     <angular-editor id="editor2" [(ngModel)]="htmlContent2" [config]="editorConfig"></angular-editor>
-    {{htmlContent2}}
+    {{ htmlContent2 }}
   </div>
 </div>
